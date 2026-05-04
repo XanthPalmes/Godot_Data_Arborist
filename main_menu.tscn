@@ -40,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fu7sn")
 
-[node name="Panel" type="Panel" parent="." unique_id=1509513076]
+[node name="Background" type="Panel" parent="." unique_id=1509513076]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -64,7 +64,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 12
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=670874692]
+[node name="StartBtn" type="Button" parent="VBoxContainer" unique_id=670874692]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_fu7sn")
@@ -74,7 +74,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
 text = "Start"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1183785537]
+[node name="ExitBtn" type="Button" parent="VBoxContainer" unique_id=1183785537]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_fu7sn")
@@ -84,7 +84,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
 text = "Exit"
 
-[node name="Label" type="Label" parent="." unique_id=1765784402]
+[node name="Title" type="Label" parent="." unique_id=1765784402]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -107,5 +107,7 @@ theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 118
 text = "Data Arborist"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartBtn" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitBtn" to="." method="_on_exit_pressed"]
